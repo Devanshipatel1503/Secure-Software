@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 2em;
+      color: #333;
+    }
+
+    .login-form {
+      background: white;
+      padding: 2em;
+      margin: auto;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    input[type="submit"] {
+      padding: 0.5em 1em;
+      font-size: 1em;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-form">
+    <h1>Login</h1>
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" action="/login">
+      {{ form.hidden_tag() }}
+      <p>Email: {{ form.email(size=30) }}</p>
+      <p>Password: {{ form.password(size=30) }}</p>
+      <p><input type="submit" value="Login" /></p>
+    </form>
+  </div>
+</body>
+</html>

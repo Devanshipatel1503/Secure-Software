@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 2em;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      background: white;
+      padding: 2em;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 1.75em;
+      margin-bottom: 1em;
+    }
+
+    nav a {
+      display: block;
+      margin: 0.5em 0;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>What would you like to do today?</h1>
+    <nav>
+      <a href="/details?account=100">Savings Account Details</a>
+      <a href="/details?account=998">Checking Account Details</a>
+      <a href="/transfer">Transfer Funds</a>
+      <a href="/logout">Logout</a>
+    </nav>
+  </div>
+</body>
+</html>

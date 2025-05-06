@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 2em;
+      margin: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 1.5em;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p><strong>Hi, {{ user }}</strong></p>
+    <h1>Account {{ account_number }} Details</h1>
+    <p>Current Balance: <strong>${{ balance }}</strong></p>
+    <a href="/dashboard">← Back to Dashboard</a>
+  </div>
+</body>
+</html>
